@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cabin+Sketch:wght@400;700&family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap");
+
+    @import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cabin+Sketch:wght@400;700&family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne:wght@400..800&display=swap");
+
+    @import url("https://fonts.cdnfonts.com/css/satoshi");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 12px;
+    }
+
+    .marq h2,
+    .see,
+    .year,
+    .how,
+    .sNo,
+    .rob {
+      font-family: "Roboto Mono", serif;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .icons {
+      animation: marquee 4s linear 0s infinite;
+    }
+
+    @media (min-width: 768px) {
+      html {
+        font-size: clamp(1rem, 2.5vw, 2rem);
+    }
+    
+    footer .foot1, footer .foot2, footer .foot1{
+          font-size: clamp(.5rem, 1vw, 1.2rem);
+
+      }
+
+      .picCard{
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+        "a a "
+         "b c"
+         "d e"
+        ;
+      }
+
+      .pic1{
+        grid-area: a;
+      }
+      .pic2{
+        grid-area: b;
+      }
+      .pic3{
+        grid-area: c;
+      }
+      .pic4{
+        grid-area: d;
+      }
+      .pic5{
+        grid-area: e;
+      }
+    }
+  </style>
+  <body class="w-full h-[100%]">
+    <main class="w-full border h-[100%] border px-4">
+      <nav class="w-full border-b-1 border-black-500 flex justify-between py-4">
+        <div class="logo w-fit flex items-center justify-center gap-3">
+          <img
+            class="w-[30%]"
+            src="assets/images/svgs/svgexport-1.png"
+            alt=""
+          />
+          <h2 class="text-xl font-medium tracking-tighter font-[sans-serif]">
+            FYLLA
+          </h2>
+        </div>
+
+        <div class="menu w-[6rem] justify-between flex items-center">
+          <button class="border w-[3rem] h-[1.8rem] px-1 rounded-2xl">
+            <img
+              class="w-[1.2rem]"
+              src="/assets/images/svgs/svgexport-3.svg"
+              alt=""
+            />
+          </button>
+          <div
+            class="bar flex flex-col gap-2 w-[2.3rem] justify-center items-center"
+          >
+            <div class="w-[2.2rem] h-px bg-black"></div>
+            <div class="w-[2.2rem] h-px bg-black"></div>
+            <div class="w-[2.2rem] h-px bg-black"></div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="diamond w-full mt-2 py-6">
+        <img
+          class="w-[2.5rem]"
+          src="/assets/images/svgs/svgexport-4.png"
+          alt=""
+        />
+      </section>
+
+      <section class="hero flex flex-col gap-4">
+        <h1 class="font-[Syne] text-4xl font-medium">
+          We are a digital agency from Lisbon.
+        </h1>
+        <p class="font-[Satoshi]">
+          Elevating brands through creative digital solutions, proudly
+          representing Lisbon's vibrant innovation.
+        </p>
+        <video
+          class="rounded-xl"
+          src="https://framerusercontent.com/assets/rXAszXcrH4ELEBbdilxkxdbfmrE.mp4"
+          muted
+          autoplay
+          loop
+        ></video>
+      </section>
+
+      <section
+        class="marq w-full border-t-2 border-b-1 mt-5 flex flex-col gap-4"
+      >
+        <h2 class="text-center mt-5">OUR CLIENTS</h2>
+        <div
+          class="slide w-[100%] overflow-hidden whitespace-nowrap flex flex-row justify-between items-center gap-1"
+        >
+          <div
+            class="icons flex gap-4 justify-between w-[100%] mx-4 mb-4 md:gap-10"
+          >
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-5.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-6.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-7.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-8.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-9.png"
+              alt=""
+            />
+
+            <!-- ----- -->
+
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-5.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-6.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-7.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-8.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-9.png"
+              alt=""
+            />
+
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-5.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-6.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-7.png"
+              alt=""
+            />
+            <img
+              class="w-[2.8rem] object-contain md:w-[3rem]"
+              src="/assets/images/svgs/svgexport-8.png"
+              alt=""
+            />
+            <img
+            class="w-[2.8rem] object-contain md:w-[3rem]"
+            src="/assets/images/svgs/svgexport-9.png"
+            alt=""
+          />
+          <img
+          class="w-[2.8rem] object-contain md:w-[3rem]"
+          src="/assets/images/svgs/svgexport-5.png"
+          alt=""
+        />
+        <img
+          class="w-[2.8rem] object-contain md:w-[3rem]"
+          src="/assets/images/svgs/svgexport-6.png"
+          alt=""
+        />
+        <img
+          class="w-[2.8rem] object-contain md:w-[3rem]"
+          src="/assets/images/svgs/svgexport-7.png"
+          alt=""
+        />
+        <img
+          class="w-[2.8rem] object-contain md:w-[3rem]"
+          src="/assets/images/svgs/svgexport-8.png"
+          alt=""
+        />
+        <img
+          class="w-[2.8rem] object-contain md:w-[3rem]"
+          src="/assets/images/svgs/svgexport-9.png"
+          alt=""
+        />
+
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="card1 w-full border-b-1 py-6 flex flex-col items-start gap-2"
+      >
+        <img
+          class="w-[2.8rem]"
+          src="/assets/images/svgs/svgexport-11.png"
+          alt=""
+        />
+        <h2 class="font-[syne] text-2xl font-medium">BRANDING</h2>
+        <p class="font-[Satoshi] text-sm opacity-80">
+          We craft compelling brand identities that leave a lasting impression.
+        </p>
+      </section>
+
+      <section
+        class="card2 w-full border-b-1 py-6 flex flex-col items-start gap-2"
+      >
+        <img
+          class="w-[2.8rem]"
+          src="/assets/images/svgs/svgexport-12.png"
+          alt=""
+        />
+        <h2 class="font-[syne] text-2xl font-medium">DESIGN</h2>
+        <p class="font-[Satoshi] text-sm opacity-80">
+          Innovative and aesthetic designs that bring your ideas to life.
+        </p>
+      </section>
+
+      <section
+        class="card3 w-full border-b-1 py-6 flex flex-col items-start gap-2"
+      >
+        <img
+          class="w-[2.8rem]"
+          src="/assets/images/svgs/svgexport-13.png"
+          alt=""
+        />
+        <h2 class="font-[syne] text-2xl font-medium">BRANDING</h2>
+        <p class="font-[Satoshi] text-sm opacity-80">
+          Captivating visual storytelling that engages and resonates with your
+          audience.
+        </p>
+      </section>
+
+      <section
+        class="card4 w-full border-b-1 py-6 flex flex-col items-start gap-2"
+      >
+        <img
+          class="w-[2.8rem]"
+          src="/assets/images/svgs/svgexport-14.png"
+          alt=""
+        />
+        <h2 class="font-[syne] text-2xl font-medium">DESIGN</h2>
+        <p class="font-[Satoshi] text-sm opacity-80">
+          Engaging and persuasive content that captures attention and sparks
+          meaningful connections.
+        </p>
+      </section>
+
+      <section
+        class="card5 w-full border-b-1 py-6 flex flex-col items-start gap-2"
+      >
+        <h2 class="font-[syne] text-3xl font-medium">FEATURED WORK</h2>
+        <p class="font-[Satoshi] text-base opacity-80">
+          Showcasing our standout projects that blend creativity, strategy, and
+          cutting-edge design.
+        </p>
+        <button
+          class="bg-black text-white py-1 px-2 rounded-lg text-xs mt-6 see"
+        >
+          SEE ALL WORK
+        </button>
+      </section>
+
+      <section class="picCard w-full border-b-1 pb-4">
+        <div class="pic1 flex flex-col gap-2 mt-6 md-w-[100%] ">
+          <img class="rounded-2xl" src="/assets/images/svgs/pic1.webp" alt="" />
+          <div class="flex justify-between items-center">
+            <h2 class="font-[Syne] text-xl font-medium">Dancing Stars</h2>
+            <p class="year text-xs">2023</p>
+          </div>
+        </div>
+        <div class="pic2 flex flex-col gap-2 mt-6">
+          <img class="rounded-2xl" src="/assets/images/svgs/pic2.webp" alt="" />
+          <div class="flex justify-between items-center">
+            <h2 class="font-[Syne] text-xl font-medium">Enjoy Silence</h2>
+            <p class="year text-xs">2023</p>
+          </div>
+        </div>
+        <div class="pic3 flex flex-col gap-2 mt-6">
+          <img class="rounded-2xl" src="/assets/images/svgs/pic3.webp" alt="" />
+          <div class="flex justify-between items-center">
+            <h2 class="font-[Syne] text-xl font-medium">Pure Vision</h2>
+            <p class="year text-xs">2023</p>
+          </div>
+        </div>
+        <div class="pic4 flex flex-col gap-2 mt-6">
+          <img class="rounded-2xl" src="/assets/images/svgs/pic4.webp" alt="" />
+          <div class="flex justify-between items-center">
+            <h2 class="font-[Syne] text-xl font-medium">Boring Brand</h2>
+            <p class="year text-xs">2023</p>
+          </div>
+        </div>
+        <div class="pic5 flex flex-col gap-2 mt-6">
+          <img class="rounded-2xl" src="/assets/images/svgs/pic5.webp" alt="" />
+          <div class="flex justify-between items-center">
+            <h2 class="font-[Syne] text-xl font-medium">New Culture</h2>
+            <p class="year text-xs">2023</p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="services w-full border-b-1 py-6 flex flex-col items-start gap-2"
+      >
+        <img
+          class="w-[2.8rem] py-6"
+          src="/assets/images/svgs/svgexport-14.png"
+          alt=""
+        />
+        <p class="text-xs how">HOW WE WORK</p>
+        <h2 class="font-[syne] text-3xl font-medium">
+          We help our clients succeed with innovative strategies.
+        </h2>
+        <p class="font-[Satoshi] text-base opacity-80">
+          Through careful analysis, creative thinking, and a deep understanding
+          of their goals, we empower businesses to surpass expectations and
+          thrive in today's dynamic and competitive landscape.
+        </p>
+        <button
+          class="bg-black text-white py-1 px-2 rounded-lg text-xs mt-6 see"
+        >
+          OUR SERVICES
+        </button>
+      </section>
+
+      <section class="w-full border-b-2 py-7">
+        <h2 class="text-center text-3xl font-medium font-[Syne]">OUR VALUES</h2>
+      </section>
+
+      <section class="image mt-6 w-full flex justify-center items-center">
+        <img
+          class="rounded-xl md: w-[30rem]"
+          src="/assets/images/svgs/threePerson.jpg"
+          alt=""
+        />
+      </section>
+
+      <section class="info w-full">
+        <div class="outer border-b-1 py-8 flex justify-between w-full">
+          <div
+            class="sNo border w-[2rem] h-[2rem] flex justify-center items-center rounded-full opacity-80 text-sm"
+          >
+            01
+          </div>
+          <div class="info w-[82%]">
+            <h2 class="text-2xl font-medium font-[Syne]">VISION</h2>
+            <p class="text-xs font-normal opacity-80 font-[Roboto Mono]">
+              Our relentless pursuit of a shared vision fuels our creativity and
+              propels us forward. With clarity and foresight, we craft
+              strategies that align with our clients' goals and aspirations,
+              transforming their dreams into reality and shaping a future worth
+              embracing.
+            </p>
+          </div>
+        </div>
+        <div class="outer border-b-1 py-8 flex justify-between w-full">
+          <div
+            class="sNo border w-[2rem] h-[2rem] flex justify-center items-center rounded-full opacity-80 text-sm"
+          >
+            02
+          </div>
+          <div class="info w-[82%]">
+            <h2 class="text-2xl font-medium font-[Syne]">INNOVATION</h2>
+            <p class="text-xs font-normal opacity-80 font-[Roboto Mono]">
+              Innovation is at the core of everything we do. We embrace
+              curiosity, explore uncharted territories, and challenge the status
+              quo. By pushing boundaries and thinking outside the box, we create
+              groundbreaking solutions that disrupt industries and inspire
+              audiences.
+            </p>
+          </div>
+        </div>
+        <div class="outer border-b-1 py-8 flex justify-between w-full">
+          <div
+            class="sNo border w-[2rem] h-[2rem] flex justify-center items-center rounded-full opacity-80 text-sm"
+          >
+            03
+          </div>
+          <div class="info w-[82%]">
+            <h2 class="text-2xl font-medium font-[Syne]">CONNECTION</h2>
+            <p class="text-xs font-normal opacity-80 font-[Roboto Mono]">
+              We believe in the power of connection. We strive to build bridges
+              between brands and their audiences, fostering genuine and lasting
+              relationships. Through compelling storytelling and meaningful
+              interactions, we create experiences that evoke emotions,
+              strengthen bonds, and cultivate trust, ultimately turning
+              customers into brand advocates.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="contact w-full border-b-1 py-6 flex flex-col items-start gap-2"
+      >
+        <img
+          class="w-[2.8rem] py-6"
+          src="/assets/images/svgs/svgexport-16.png"
+          alt=""
+        />
+        <p class="text-xs how">CONTACT</p>
+        <h2 class="font-[syne] text-3xl font-medium uppercase">
+          Let’s bring your brand to the next level
+        </h2>
+        <p class="font-[Satoshi] text-base opacity-80">
+          Together, let's elevate your brand to new heights by unleashing its
+          full potential and captivating your target audience.
+        </p>
+        <button
+          class="bg-black text-white py-1 px-2 rounded-lg text-xs mt-6 see"
+        >
+          GET IN TOUCH
+        </button>
+      </section>
+
+      <section class="w-full border-b-1 py-7">
+        <h2 class="text-center text-3xl font-medium font-[Syne]">
+          LATEST NEWS
+        </h2>
+      </section>
+
+      <section class="image w-full md:flex md:justify-center md:items-start gap-4">
+        <div class="tick1 w-full flex flex-col gap-2 py-6">
+          <img
+            class="rounded-xl"
+            src="/assets/images/svgs/twoPersonClap.webp"
+            alt=""
+          />
+          <p class="rob text-xs">BRANDING</p>
+          <p class="font-[Syne] text-lg font-medium leading-none w-[80%]">
+            Things to Look for When Comparing Branding Alternatives
+          </p>
+        </div>
+        <div class="tick2 w-full flex flex-col gap-2 py-6">
+          <img
+            class="rounded-xl"
+            src="/assets/images/svgs/handWritten.webp"
+            alt=""
+          />
+          <p class="rob text-xs">BRANDING</p>
+          <p class="font-[Syne] text-lg font-medium leading-none w-[80%]">
+            5 Stand-out Features of Branding You Should Know
+          </p>
+        </div>
+        <div class="tick3 w-full flex flex-col gap-2 py-6">
+          <img
+            class="rounded-xl"
+            src="/assets/images/svgs/examBoard.webp"
+            alt=""
+          />
+          <p class="rob text-xs">BRANDING</p>
+          <p class="font-[Syne] text-lg font-medium leading-none w-[80%]">
+            Branding: What Real Customers Have to Say
+          </p>
+        </div>
+      </section>
+
+      <footer class="w-full md:flex justify-between border-t-1 border-b-1 py-4">
+        <div class="foot1 flex flex-col gap-5 pr-4  py-4 md:border-r-1">
+          <div class="logo w-[6rem] gap-3 flex items-center justify-between">
+            <img
+              class="w-[40%]"
+              src="assets/images/svgs/svgexport-1.png"
+              alt=""
+            />
+            <h2 class="text-xl font-medium tracking-tighter font-[sans-serif]">
+              FYLLA
+            </h2>
+          </div>
+          <div>
+            <p class="font-[Satoshi] text-xs opacity-80">Main Street. 1</p>
+            <p class="font-[Satoshi] text-xs opacity-80">22222 Berlin</p>
+          </div>
+
+          <div class="circle flex gap-2 mt-4">
+            <div
+              class="sNo border w-[1.8rem] h-[1.8rem] flex justify-center items-center rounded-full opacity-80 text-xs"
+            >
+              IN
+            </div>
+            <div
+              class="sNo border w-[1.8rem] h-[1.8rem] flex justify-center items-center rounded-full opacity-80 text-xs"
+            >
+              PI
+            </div>
+            <div
+              class="sNo border w-[1.8rem] h-[1.8rem] flex justify-center items-center rounded-full opacity-80 text-xs"
+            >
+              TW
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="foot2 border-b-1 border-black flex flex-col justify-start gap-4 items-start py-4  md:border border-white"
+        >
+          <h2 class="font-[Syne] text-xl font-medium">Pages</h2>
+          <p class="rob text-xs">HOME</p>
+          <p class="rob text-xs">SERVICES</p>
+          <p class="rob text-xs">STUDIO</p>
+          <p class="rob text-xs">CONTACT</p>
+          <button class="bg-black text-white py-1 px-2 rounded-lg text-xs see">
+            MORE TEMPLATES
+          </button>
+        </div>
+        <div
+          class="foot3 flex flex-col justify-start gap-4 items-start py-4 border-b-1 md:border border-white"
+        >
+          <h2 class="font-[Syne] text-xl font-medium">CMS</h2>
+          <p class="rob text-xs">WORK</p>
+          <p class="rob text-xs">WORK SINGLE</p>
+          <p class="rob text-xs">BLOG</p>
+          <p class="rob text-xs">BLOG SINGLE</p>
+        </div>
+        <div
+          class="foot4 flex flex-col justify-start gap-4 items-start py-4 border-b-1 md:border border-white"
+        >
+          <h2 class="font-[Syne] text-xl font-medium">Utility Pages</h2>
+          <p class="rob text-xs">404 ERROR PAGE</p>
+          <p class="rob text-xs">STYLEGUIDE</p>
+          <p class="rob text-xs">LICENSING</p>
+        </div>
+
+    </footer>
+    <div class="foot4 w-full">
+      <p class="text-center rob text-xs py-6">&copy MADE BY ARTAZA</p>
+    </div>
+    </main>
+  </body>
+</html>
